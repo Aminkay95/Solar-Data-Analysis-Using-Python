@@ -1,33 +1,72 @@
-# Solar-Data-Analysis-Using-Python
 
-Project Overview.
+Solar Electricity Analysis and Battery Storage Optimization
+This project analyzes solar electricity generation, electricity usage, and battery usage data to evaluate the economic and energy benefits of integrating a battery system into a solar power setup. By leveraging Python and its libraries, the project provides insights into energy efficiency, cost savings, and overall system optimization.
 
-This project involves analyzing solar electricity generation, electricity usage, and battery usage data to understand the potential benefits of using a battery system to store excess solar electricity. The project utilizes the Python programming language and various libraries, including pandas for data manipulation, numpy for numerical operations, matplotlib for data visualization, and datetime for handling time-related data.
+Project Overview
+The main goal of this project is to determine the potential benefits of installing a battery to store excess solar electricity. Specifically, the analysis focuses on:
 
-Project Steps
+Visualizing solar electricity generation and electricity usage patterns.
+Quantifying the electricity bought from the grid without and with a battery.
+Modeling the battery charge level and its impact on cost savings.
+Aggregating data for monthly trends and visualizations.
+While the analysis reveals potential annual savings of $352, it concludes that, at the current system capacity, the cost of installing a $4,000 battery is not economically justified.
 
-Step (i): Data Visualization and Checks
-The project begins by loading the provided data from an Excel file (Junior Data Analyst _ Data.xlsx) into a pandas DataFrame. 
-The data contains information about solar electricity generation, electricity usage, and other relevant parameters. The goal of this step is to visualize and compare the average solar electricity generation and electricity usage for each hour in a day.
+Features and Steps
+Step 1: Data Visualization and Checks
+Goal: Load and explore data from an Excel file.
+Tools Used: pandas for data manipulation, matplotlib for visualizing daily average solar electricity generation and usage patterns.
+Step 2: Calculating Electricity Bought (Without Battery)
+Goal: Compute the amount of electricity required from the grid by subtracting solar generation from usage.
+Tools Used: numpy for efficient element-wise calculations.
+Step 3: Calculating Excess Solar Generation
+Goal: Determine surplus solar electricity by subtracting usage from generation.
+Tools Used: numpy for computation and capping negative values.
+Step 4: Modeling Battery Charge Level
+Goal: Simulate the battery’s charge level over time, considering a maximum capacity of 12.5 kWh.
+Implementation: Iterative loop updates battery charge based on available excess solar electricity.
+Step 5: Calculating Electricity Bought with Battery
+Goal: Recompute electricity bought from the grid, accounting for electricity stored in the battery.
+Step 6: Calculating Savings from Installing a Battery
+Goal: Evaluate the cost savings by comparing electricity expenses with and without a battery.
+Assumptions: Electricity price = $0.17/kWh.
+Step 7: Data Aggregation and Visualization
+Goal: Aggregate data on a monthly basis and visualize trends using bar plots.
+Tools Used: matplotlib for monthly visualizations.
+Technologies Used
+Programming Language: Python
+Libraries:
+pandas for data loading, cleaning, and manipulation.
+numpy for numerical operations.
+matplotlib for data visualization.
+datetime for handling time-based data.
+How to Use This Repository
+Clone the Repository:
 
-Step (ii): Calculating Electricity Bought
-In this step, the project calculates the electricity needed to be bought from the provider by subtracting the solar electricity generation from the electricity usage. The numpy library is used to efficiently perform element-wise subtraction and limit the result to non-negative values.
+bash
+Copy code
+git clone https://github.com/yourusername/solar-battery-analysis.git
+cd solar-battery-analysis
+Install Dependencies: Make sure you have Python 3.7+ installed. Install required libraries using:
 
+bash
+Copy code
+pip install -r requirements.txt
+Run the Analysis: Open the analysis.ipynb notebook in Jupyter and run the cells step by step.
 
-Step (iii): Calculating Excess Solar Generation
-The excess solar electricity generated is calculated by subtracting the electricity usage from the solar electricity generation. Similar to Step (ii), numpy is used to perform element-wise subtraction and limit the result to non-negative values.
+Visualize Results: Check the output plots and data aggregations for insights on solar generation, usage, and battery impact.
 
-Step (iv): Modeling Battery Charge Level
-This step models the cumulative battery charge level over time. The project assumes a maximum battery capacity of 12.5 kWh. The battery charge level is updated iteratively using a loop that considers the excess solar electricity generated and limits the charging to the battery's maximum capacity.
-
-Step (v): Calculating Electricity Bought with Battery
-The electricity bought when using the battery is calculated by subtracting the excess solar generation from the previously calculated electricity bought. This accounts for the electricity stored in the battery that can be used instead of buying from the provider.
-
-Step (vi): Calculating Savings from Installing a Battery
-To quantify the potential savings from installing a battery, the project calculates the cost difference between buying electricity from the provider without a battery and buying electricity with a battery. The electricity price is assumed to be $0.17 per kWh.
-
-Step (vii): Data Aggregation and Visualization
-The project aggregates the data on a monthly basis to provide a broader perspective. The aggregated values include total solar generation, electricity usage, electricity bought without a battery, and electricity bought with a battery. This aggregated data is then visualized using a bar plot, with each month represented on the x-axis and the respective values on the y-axis.
-
+Project Files
+Solar data analysis.ipynb: Main Jupyter Notebook containing the code and analysis steps.
+data/Junior_Data_Analyst_Data.xlsx: Dataset with solar generation, usage, and other parameters.
+README.md: Project documentation (this file).
 Conclusion
-This project demonstrates the process of analyzing solar electricity generation, electricity usage, and battery usage data. It showcases various data manipulation techniques, calculations, and data visualization methods using Python and its libraries. The results provide insights into the potential benefits of utilizing a battery system to store excess solar electricity, leading to potential cost savings and increased energy efficiency.
+This project demonstrates how data analysis can aid in evaluating renewable energy systems and their optimization. While the battery system provides potential cost savings, the analysis shows that it is not economically viable at the current setup.
+
+Future Work
+Analyze scenarios with higher solar generation or reduced battery costs.
+Explore dynamic electricity pricing models.
+Incorporate machine learning for predictive energy usage and optimization.
+
+
+Acknowledgments
+Special thanks to the Junior Data Analyst program for providing the dataset used in this project.
