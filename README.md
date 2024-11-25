@@ -1,5 +1,6 @@
 
-Solar Electricity Analysis and Battery Storage Optimization
+# Solar Electricity Analysis and Battery Storage Optimization
+
 This project analyzes solar electricity generation, electricity usage, and battery usage data to evaluate the economic and energy benefits of integrating a battery system into a solar power setup. By leveraging Python and its libraries, the project provides insights into energy efficiency, cost savings, and overall system optimization.
 
 Project Overview
