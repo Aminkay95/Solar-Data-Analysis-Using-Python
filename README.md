@@ -1,7 +1,7 @@
-Solar Electricity and Battery Usage Analysis
+# Solar Electricity and Battery Usage Analysis
 This project involves analyzing solar electricity generation, electricity usage, and battery usage data to assess the potential benefits of incorporating a battery system into the energy setup. Using Python and its powerful libraries, the analysis evaluates cost savings and energy efficiency improvements that a battery system could bring.
 
-Project Overview
+# Project Overview
 The project investigates:
 
 Solar electricity generation.
@@ -9,12 +9,13 @@ Electricity usage patterns.
 Potential cost savings from installing a battery to store excess solar electricity.
 While the analysis indicates that installing a battery saves approximately $352 per year, the high battery cost ($4,000) and system cost ($6,800) make the investment economically unviable at the current solar generation and electricity usage levels.
 
-Features
+# Features
 Data visualization: Visual comparison of solar electricity generation and electricity usage across different hours of the day.
 Cost analysis: Quantification of electricity costs with and without a battery system.
 Energy modeling: Simulation of battery charge levels to assess its contribution to energy savings.
 Monthly aggregation: Insights into energy generation, usage, and cost savings on a broader timescale.
-Project Steps
+
+# Project Steps
 1. Data Visualization and Initial Checks
 Goal: Visualize and compare average hourly solar electricity generation and electricity usage.
 Libraries: pandas, matplotlib.
@@ -35,19 +36,24 @@ Method: Adjust electricity bought by factoring in battery-stored energy.
 Goal: Quantify yearly cost savings from the battery system.
 Electricity Price Assumption: $0.17 per kWh.
 7. Data Aggregation and Visualization
+
 Goal: Monthly aggregation of solar generation, electricity usage, and costs.
 Visualization: Bar plots to compare monthly metrics.
-Results
+
+# Results
 Cost Savings: Annual savings of $352.
 Conclusion: Installing a battery at the current system capacity is not economically viable.
-Tools and Technologies
+
+# Tools and Technologies
 Programming Language: Python.
-Libraries:
+
+# Libraries:
 pandas: Data manipulation and analysis.
 numpy: Numerical operations.
 matplotlib: Data visualization.
 datetime: Time-related data handling.
-Installation
+
+# Installation
 Clone the repository:
 bash
 Copy code
@@ -58,11 +64,12 @@ Copy code
 pip install -r requirements.txt
 Place the Junior Data Analyst _ Data.xlsx file in the root directory.
 
-Visualization Example
+# Visualization Example
 The project includes visualizations such as:
 
 Average hourly solar generation vs. electricity usage.
 Monthly comparison of energy metrics.
-Conclusion
+
+# Conclusion
 This project demonstrates data-driven decision-making in energy management. While the integration of a battery system offers savings and improved energy efficiency, the high initial cost currently outweighs the financial benefits.
 
